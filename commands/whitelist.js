@@ -82,7 +82,6 @@ module.exports = {
                 .addOptions(constructJSON())
             )
         const values = interaction.values.toString().split(',')
-        
         // if the interaction channel is not a DM, interaction reply
         if (interaction.channel.type !== 'DM') {
             interaction.reply({ ephemeral: true, content: "Check your direct messages!" })
@@ -109,11 +108,12 @@ module.exports = {
             let err = await whitelist(username, user, values[1], values[0]);
             if (err === 409) {
                 await interaction.user.send({
-                    content: `You're already whitelisted on **${values[2]}**, perhaps you want to fix your whitelist?`
+                    content: `You're already whitelisted on **${values[4]}**, perhaps you want to fix your whitelist?`
                 });
             } else {
                 await interaction.user.send({
-                    content: `Successfully whitelisted on **${values[2]}** \n **GLHF**`
+                    content: `Successfully whitelisted on **${values[4]}** \n**IP: **${values[2]}\n**VERSION: **${values[3]}\n**GLHF**`
+                    //content: `${values[0]} - ${values[1]} - ${values[2]} - ${values[3]} - ${values[4]}`
                 });
             }
         })

@@ -52,7 +52,7 @@ module.exports = {
     },
     async onSelect(interaction) {
         const values = interaction.values.toString().split(',')
-        await interaction.update({ content: `Received request to fix whitelist on **${values[2]}**`, components: [] });
+        await interaction.update({ content: `Received request to fix whitelist on **${values[4]}**`, components: [] });
         let start = await interaction.user.send({ content: `Send me your new Minecraft username!` });
         let filter = m => m.author.id === interaction.user.id
 
@@ -63,7 +63,7 @@ module.exports = {
         }).on('collect', async(m) => {
             
             await interaction.user.send({ 
-                content: `Fixing your whitelist on **${values[2]}**, with your new username **${m.content}**.`
+                content: `Fixing your whitelist on **${values[4]}**, with your new username **${m.content}**.`
             })
             
             let username = m.content;
@@ -72,7 +72,7 @@ module.exports = {
             if (err == 404) {
                 interaction.user.send({ content: `${username} is not in the database, did you select the wrong server, or perhaps you want to whitelist instead` });
             } else {
-                await interaction.user.send({ content: `Your whitelist has been fixed for **${values[2]}**, with your new username **${m.content}**.` });
+                await interaction.user.send({ content: `Your whitelist has been fixed for **${values[4]}**, with your new username **${m.content}**.` });
             }
 
         })

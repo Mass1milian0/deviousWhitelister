@@ -39,3 +39,4 @@ clone this repo, extract it anywhere, make sure you have node.js (latest), open 
  - AMP_PASSWORD: the password for the amp account that the bot manages
  - CLIENTID: client id of the bot
  - GUILDID: guild id where the bot will work
+ - MenuChannelID: where the menu has to be posted

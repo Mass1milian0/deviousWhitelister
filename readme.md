@@ -16,12 +16,12 @@ clone this repo, extract it anywhere, make sure you have node.js (latest), open 
     {
         "label": "friendly name",
         "description": "brief description",
-        "value": "AMP INSTANCE NAME,AMP INSTANCE API IP"
+        "value": "AMP INSTANCE NAME,AMP INSTANCE API IP,MC SERVER IP ADDRESS,MODPACK VERSION"
     },
         {
         "label": "another name",
         "description": "another brief description",
-        "value": "AMP INSTANCE NAME, ANOTHER AMP INSTANCE API IP"
+        "value": "AMP INSTANCE NAME, ANOTHER AMP INSTANCE API IP,MC SERVER IP ADDRESS,MODPACK VERSION"
     }
 ]
  ```
